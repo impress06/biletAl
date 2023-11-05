@@ -75,6 +75,10 @@ textName.addEventListener("change", (e) => {
  const timeZone= new Date().getUTCDate;
  console.log(timeZone)
 document.querySelector(".but").addEventListener("click",()=>{
+    if(koltuk=="" || namez=="")
+    {
+        alert("lütfen isim ve koltuk seçimi yapın")
+    }
     
     switch(selectedOption){
         case "" :alert("lütfen bileti seçin")
