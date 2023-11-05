@@ -17,12 +17,28 @@ console.log(year); // 2022
 
 buton.forEach(p => {
     p.addEventListener("click", () => {
+        if(p.classList.contains("dolu"))
+        {
+            p.classList.remove("dolu");
+            seatCount--;
+        }
+        else if (!(p.classList.contains("dolu")))
+        {
+            seatCount++;
+            if(seatCount<=1){
+                p.classList.add("dolu")
+
+            }
+            
+            
+        }
         koltuk=p.textContent;
-        seatCount >1 && (back.style.display = 'block')
-        seatCount <=1 && p.classList.toggle("dolu")
-        seatCount+=1;
+        if(seatCount >1)
+          (back.style.display = 'block')
+        
         
     });
+    
 
     p.addEventListener("mouseover", () => {
         if (!p.classList.contains("dolu")) {
