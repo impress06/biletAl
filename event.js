@@ -77,7 +77,7 @@ textName.addEventListener("change", (e) => {
 document.querySelector(".but").addEventListener("click",()=>{
     if(koltuk=="" || namez=="")
     {
-        alert("lütfen isim ve koltuk seçimi yapın")
+        alert("lütfen isim ve koltuk seçimi yapınız...")
     }
     
     switch(selectedOption){
