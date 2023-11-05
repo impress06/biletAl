@@ -79,23 +79,27 @@ document.querySelector(".but").addEventListener("click",()=>{
     {
         alert("lütfen isim ve koltuk seçimi yapınız...")
     }
+    else{
+        switch(selectedOption){
+            case "" :alert("lütfen bileti seçin")
+            break;
+            case "indirimli" : document.querySelector(".userName").textContent=namez
+            document.querySelector(".ticketPrice").textContent="Fiyat 120 Tl"
+            document.querySelector(".ticketDate").textContent=month + "/" + day + "/" + year
+            document.querySelector(".ticket").style.display="block"
+            document.querySelector(".ticketSeat").textContent=koltuk
+            console.log(koltuk)
+            break;
     
-    switch(selectedOption){
-        case "" :alert("lütfen bileti seçin")
-        break;
-        case "indirimli" : document.querySelector(".userName").textContent=namez
-        document.querySelector(".ticketPrice").textContent="Fiyat 120 Tl"
-        document.querySelector(".ticketDate").textContent=month + "/" + day + "/" + year
-        document.querySelector(".ticket").style.display="block"
-        document.querySelector(".ticketSeat").textContent=koltuk
-        console.log(koltuk)
-        break;
+            case "Tam":  document.querySelector(".userName").textContent=namez
+            document.querySelector(".ticketPrice").textContent="Fiyat 170 Tl"
+            document.querySelector(".ticketDate").textContent=month + "/" + day + "/" + year
+            document.querySelector(".ticket").style.display="block"
+        }
 
-        case "Tam":  document.querySelector(".userName").textContent=namez
-        document.querySelector(".ticketPrice").textContent="Fiyat 170 Tl"
-        document.querySelector(".ticketDate").textContent=month + "/" + day + "/" + year
-        document.querySelector(".ticket").style.display="block"
     }
+    
+    
     
 })
 
